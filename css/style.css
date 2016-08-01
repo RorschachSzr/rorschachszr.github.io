@@ -1,0 +1,778 @@
+/*---------页面全局样式---------*/
+*{						/* *表示针对HTML的所有元素*/
+	padding:0px;			/*内边距为0px*/
+	margin:0px;			/*外边距为0px*/
+
+}
+p {						/*段落样式*/
+	margin: 0 0 10px 0;		/*上、右、下、左的外边距依次为0px,0px,10px,0px*/
+	padding: 0; 
+}
+img {						/*设置图片样式*/
+	border: none; 			/*图片无边框*/
+	background-position: left;
+}
+a, a:link, a:visited {			/*设置超链接及访问过链接的样式*/		/*字体正常粗细*/
+	text-decoration: none;		/*链接无修饰*/
+}
+a:hover {					/*设置鼠标悬停链接的样式*/
+	text-decoration: underline;	/*加下划线*/
+}
+h1 {
+	font-size: 26px;
+	margin: 0 0 15px 5px;
+	padding: 5px 0
+}
+h3 {						/*设置h3标题独立的样式*/
+	font-size: 20px;
+	margin: 5px 0 20px;
+	padding: 0;
+}
+h4 {						/*设置h4标题独立的样式*/
+	font-size: 16px;
+	margin: 0 0 15px;
+	padding: 0;
+}
+h5 {						/*设置h5标题独立的样式*/
+	font-size: 14px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+.cleaner {
+	clear: both				/*清除所有浮动*/
+}
+.h10 {
+	height: 10px			/*清除浮动后保留的空白区域的高度为10px*/
+}
+.h20 {
+	height: 20px			/*清除浮动后保留的空白区域的高度为20px*/
+}
+.h50 {
+	height: 50px			/*清除浮动后保留的空白区域的高度为50px*/
+}
+.float_l {
+	float: left				/*向左浮动*/
+}
+.float_r {
+	float: right 				/*向右浮动*/
+}
+
+body{					/*设置页面整体样式*/
+	width:auto;
+	margin:0 auto;			/*页面自动居中对齐*/
+	font-family:Tahoma;
+	font-size:12px;			/*设置文字大小为12px*/
+				/*设置默认文字颜色为灰色*/
+	position:relative			/*相对定位*/
+}
+/*---------页面顶部区域---------*/
+#header{					/*设置页面顶部样式*/	/*上、右、下、左的内边距依次为17px,0px,0px,47px*/
+height:150px;
+width:100%;
+}
+
+.float{					/*设置Logo图片的浮动方式及右外边距*/
+	float:left;				/*向左浮动*/
+	margin-right:0px;		/*右外边距164px*/
+}
+.topblock{					/*设置购物车区块和语言区块的样式*/
+	height:16px;	/*上、右、下、左的内边距依次为15px,1px,0px,24px*/
+	float:right;				/*向右浮动*/
+	font-family:Tahoma;	
+	text-align: center;
+	font-weight:bold;
+}
+.topblock li.divider {			/*顶部项分隔线的样式*/
+	display:inline; 			/*内联元素*/
+	width:5px;
+	height:20px;
+	float:left; 				/*向左浮动*/
+	background: url(../images/topspt.gif) no-repeat center; /*背景图像居中对齐无重复*/
+}
+.topblock p{				/*设置购物车区块和语言区块段落的样式*/
+	line-height:15px;
+	color:#0283dd;			/*段落行高15px*/
+}
+.topblock a{				/*设置购物车区块和语言区块超链接的样式*/
+	margin:5px 4px 0 0;		/*上、右、下、左的外边距依次为5px,4px,0px,0px*/
+	color:#5b5b5b;			/*设置文字颜色为灰色*/
+	text-decoration:none		/*链接无修饰*/
+}
+.topblock a:hover{			/*设置购物车区块和语言区块悬停链接的样式*/
+	color: #FFCC66;			/*设置文字颜色为青色*/
+	text-decoration: none;	/*加下划线*/
+}
+.shopping{					/*设置购物车图标的样式*/
+	float:left;				/*向左浮动*/
+	padding:3px 12px 0 0		/*上、右、下、左的内边距依次为3px,12px,0px,0px*/
+}
+/*---------折叠菜单区域---------*/
+/*---------页面菜单区域---------*/
+.menu {				/*设置菜单容器样式*/
+	 				/*清除所有浮动*/
+	width:660px; 
+	height:80px;
+	margin-bottom:40px;
+	margin-left:360px;
+	margin-top:100px;
+}
+.li {
+height:40px;					/*设置菜单列表项的样式*/
+	width:120px;
+    float:left; 
+	text-align:center;		/*行高36px*/
+}
+a.nav:link, a.nav:visited {	/*菜单项未访问过链接、访问过链接的样式*/
+background:#FFFFFF;
+color:#663300;
+font-family: "新宋体";
+font-size:12px;
+					/*black色文字*/
+}
+a.nav:hover {/*鼠标悬停链接的样式*/
+background: #333333;
+/*white color 文字*/
+			
+}
+
+/*---------左侧边栏区域---------*/
+#container {				/*主体容器样式*/
+	height:100%			/*相对单位*/
+}
+#container .column {			/*column类样式*/
+	position: relative;			/*相对定位*/
+	float: left;				/*向左浮动*/
+	margin-bottom: 10px;
+}
+#left {					/*纵向菜单容器的样式*/
+	width: 172px;			/*宽度172px*/
+}
+.block{					/*纵向菜单内容区域的样式*/
+	width:168px;
+	border:1px solid #C5C5C5;	/*菜单边框为1px灰色实线*/
+	padding:1px 1px 14px 1px;
+	margin-bottom:4px;
+}
+#navigation,#recommend{				/*纵向菜单列表的样式*/
+	width:168px;
+	margin:0px;
+	padding:0px;
+}
+#navigation li,#recommend li{				/*纵向菜单列表项的样式*/
+	list-style-type:none;		/* 不显示项目符号*/
+	line-height:20px;
+	padding:0 0 0 13px;
+}
+.color{
+	background-color:#EBEBEB	/*奇数行菜单项背景色为浅灰色*/
+}
+#navigation a,#recommend a{				/*列表项超链接的样式*/
+	color:#565656;			/*文字深灰色*/
+	text-decoration:none		/*链接无修饰*/
+}
+#navigation a:hover,#recommend a:hover{			/*列表项悬停链接的样式*/
+	color:#0283DD;			/*文字青色*/
+}
+.title_box {		/*特别推荐标题文字的样式*/
+	width:168px;
+	height:30px;
+	margin:5px 0 0 0;
+	text-align:center;		/*文字居中对齐*/
+	font-size:13px;
+	font-weight:bold;		/*字体加粗*/
+	line-height:30px;		/*行高30px*/
+}
+.special {		/*特别推荐图书容器的样式*/
+	width:168px;
+	border:1px solid #c5c5c5;/*容器的边框为1px浅灰色实线*/
+	padding: 10px 0;
+}
+/*---------中央区域---------*/
+#center{					/*设置相关图片所在中央区域容器的样式*/
+	width:100%;			
+	position:relative;	
+	float:left;			/*相对定位*/
+	background:url(../../../我的站点/contentback.gif)
+}
+.banner{					/*设置书城促销广告的样式*/
+	margin:0 0 0 0px;		/*上、右、下、左的外边距依次为0px,2px,0px,1px*/
+	float:left;
+	height:20%;
+	width:100%;		/*向左浮动*/
+}
+.div2 {
+	
+}
+.div2_1 {height:25px; width:20%;  text-align:center; float:left; font-family:"幼圆"; font-size:20px; font-weight:bold;}
+.div2_underline {height:4px; width:100%; background: #CCCCCC; margin-top:0px; box-shadow: 5px 5px 5px rgba(0,0,0,0.15); text-align:center; clear:both; float:left; }
+a.nav:link, a.nav:visited 
+{                                 /*菜单项未访问过链接、访问过链接的样式*/
+font-family: "幼圆";
+					               /*black色文字*/
+}
+a.nav:hover {               /*鼠标悬停链接的样式*/
+/*white color 文字*/
+}
+
+
+#content{
+				/*设置内容区域的样式*/
+	padding:0px 0px 0px 0px;	/*上、右、下、左的内边距依次为0px,12px,30px,20px*/
+				/*向左浮动*/
+}
+#content a{float:left;}
+#content b{ float:top right;}
+
+#content p{					/*设置内容区域段落的样式*/
+	margin:0px;			/*外边距为0px*/
+	text-indent:2em;/*首行缩进*/
+	font-size:22px;
+	font-family: "微软雅黑";
+	font:bold;
+	float: none;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 5px;
+	background-position: left;
+}
+.pad25{					/*设置相关图书标题图片上内边距*/
+	padding-top:25px;		/*图片上内边距25px，使标题图片和明细区域保持分隔距离*/
+}
+.stuff{					/*设置所有图书信息区域的样式*/
+	margin:25px 0 0 0;		/*上、右、下、左的外边距依次为25px,0px,0px,0px*/
+	float:left;				/*向左浮动*/
+}
+.item{	
+				/*设置单个图书信息区域的样式*/
+	width:320px;			
+	float:left;
+	height:180px;			/*向左浮动*/
+	margin:0 0 25px 0		/*上、右、下、左的外边距依次为0px,0px,15px,0px*/
+}
+.item img{					/*设置单个图书信息区域图片的样式*/
+	float:left;				/*向左浮动*/		/*图片边框为1px灰色实线*/
+}
+.item span{					/*设置图书右侧简介文字区域的样式*/
+	font-weight:normal;
+	font-family:"新宋体";		/*正常粗细文字*/
+	font-size:14px;
+	display:block;			/*块级元素*/
+	width:620px;
+	float:left;
+	text-align:left;
+	line-height:1.8;
+					}
+.name{					/*设置咖啡名称的样式*/
+	color: #330000;			/*设置文字颜色为咖啡色*/
+	font: "宋体";
+	font-weight:900;
+	font-size:12px;
+	text-align:center;
+}
+.english{					/*设置咖啡名称的样式*/
+	color: #330000;			/*设置文字颜色为咖啡色*/
+	font-family:Tahoma;
+	font-weight:900;
+	font-size:15px;
+}
+.name:link,.name:visited{ color:#FFFFFF;	/*设置图书作者正常链接和访问过链接的样式*/
+	
+}
+.name:hover{
+color:#330000;		/*设置鼠标悬停链接的样式*/
+	text-decoration:none;		/*链接无修饰*/
+}
+a.prod_buy,a.prod_details,a.prod_like {	/*设置按钮链接的样式*/
+	width:75px;			/*宽度75px*/
+	height:24px;			/*高度24px*/
+	display:block;			/*块级元素*/
+	float:left;				/*向左浮动*/
+	background: url(../images/link_bg.gif) no-repeat center;	/*背景图像无重复中央对齐*/
+	margin:2px 5px 0 0;		/*上、右、下、左的外边距依次为2px,5px,0px,0px*/
+	text-align:center;			/*文字居中对齐*/
+	line-height:24px;			/*行高24px*/
+	text-decoration:none;		/*链接无修饰*/
+	color:#159dcc;
+}
+/*---------右侧区域---------*/
+#right {		/*右侧区域容器样式*/
+	width: 238px;   	/*容器宽238px*/
+}
+.rightblock{		/*右侧区域内容的样式*/
+	padding:0 0 0 14px	/*上、右、下、左的内边距依次为0px,0px,0px,14px*/
+}
+.blocks{		/*右侧区域3个子栏目的样式*/
+	width:218px;  	/*子栏目宽218px*/
+	background-image:url(../images/bg.gif);	/*背景图像*/
+	background-position:top left;	/*背景图像顶端左对齐*/
+	background-repeat:repeat-y;	/*背景图像垂直重复*/
+	margin:0 0 2px 0
+}
+.blocks span{		/*子栏目中局部文字信息的样式*/
+	font-size:11px;
+	font-weight:bold;		/*字体加粗*/
+	display:block;		/*块级元素*/
+	float:left;		/*向左浮动*/
+	width:68px;
+	text-align:right;
+	padding:0 7px 0 0 
+}
+.line{	/*表单每行内容的样式*/
+	display:block;	/*块级元素*/
+	float:left;		/*向左浮动*/
+	line-height:19px;		/*行高19px*/
+	padding:5px 0 0 0;
+	margin:0px;
+}
+.blocks input{	/*表单输入标签的样式*/
+	width:130px;   	/*输入标签宽130px*/
+	height:15px; 	/*输入标签高15px*/
+	float:left;	/*向左浮动*/
+	border-top:2px inset #808080;		/*上边框为2px深灰色内阴影线*/
+	border-left:2px inset #808080;		/*左边框为2px深灰色内阴影线*/
+	border-right:1px solid #CDCDCD;		/*右边框为1px浅灰色实线*/
+	border-bottom:1px solid #CDCDCD		/*下边框为1px浅灰色实线*/
+}
+.more{	/*更多信息文字的样式*/
+	display:block;	/*块级元素*/
+	float:left;	/*向左浮动*/
+	color:#0283DD;	/*青色文字*/
+	text-decoration:underline;	/*加下划线*/
+	margin:15px 0 0 0
+}
+.reg{	/*注册文字的样式*/
+	color:#0283DD;	/*青色文字*/
+	text-decoration:underline;	/*加下划线*/
+	font-size:12px;
+	float:right;
+
+}
+.reg:link,.reg:visited, .more:link,.more:visited{	/*注册链接和更多信息链接的样式*/
+	color: #0283DD;
+	text-decoration:underline
+}
+.reg:hover, .more:hover{			/*注册和更多信息鼠标悬停链接的样式*/
+	text-decoration:none			/*链接无修饰*/
+}
+.center{		/*设置表单元素居中对齐的样式*/
+	width:218px;
+	text-align:center		/*文字居中对齐*/
+}
+.pad20 img{		/*设置登录按钮图片的样式*/
+	margin-top:15px;	/*上外边距15px*/
+}
+#news{	/*设置最新消息区域的样式*/
+	padding:0 5px 5px 13px;
+	float:left;	/*向左浮动*/
+}
+#right .date{	/*设置消息发布日期的样式*/
+	display:block;	/*块级元素*/
+	width:100px;
+	line-height:19px;		/*行高19px*/
+	margin:11px 0 12px 0;
+	text-align:center;		/*文字居中对齐*/
+	font-family:Arial;
+	font-size:12px;
+	font-weight:normal;		/*文字正常粗细*/
+	color:#272727;
+	background-image:url(../images/date.gif);
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+#news p{	/*设置最新消息区域中段落的样式*/
+	display:block;	/*块级元素*/
+	float:left;	/*向左浮动*/
+	width:195px;
+	text-indent: 2em;	/*首行缩进*/
+}
+#friend{		/*设置友情链接区域的样式*/
+	width:200px;
+	margin:10px 0;
+	padding:0px;
+}
+#friend li{		/*设置友情链接列表项的样式*/
+	list-style-type:none;	/*不显示列表项目符号*/
+	line-height:20px;	/*行高20px*/
+	padding:0 0 0 13px;
+}
+#friend a{	/*设置友情链接区域超链接的样式*/
+	color:#565656;
+	text-decoration:none		/*链接无修饰*/
+}
+#friend a:hover{/*设置友情链接区域鼠标悬停链接的样式*/
+	color:#565656;
+	text-decoration:underline		/*加下划线*/
+}
+/*---------页面底部版权区域---------*/
+#footer {		/*设置底部版权区域的样式*/
+	clear: both;	/*清除所有浮动*/
+	border-top:3px solid #B7C1C4;	/*设置上边框为3px实线*/
+	padding:8px 0 17px 0;
+	text-align:center;		/*文字居中对齐*/
+	color:#323232			/*深灰色文字*/
+}
+#footer a{	/*设置版权区域链接的样式*/
+	color:#323232;			/*深灰色文字*/
+	text-decoration:none;		/*链接无修饰*/
+	margin:0 3px;
+}
+#footer p{	/*设置版权区域段落的样式*/
+	padding:10px 0 0 0	/*上、右、下、左的内边距依次为10px,0px,0px,0px*/
+}
+/*---------页面底部版权区域样式结束---------*/
+
+/* -------定义product子页面产品列表区域规则----- */
+#prod_list {
+	width:780px;
+	background:#FFF;
+	float:left;
+	padding:5px 10px 5px 15px;
+}
+.prod_list_title_bar {
+	width:780px;
+	height:31px;
+	float:left;
+	padding:0 0 0 10px;
+	line-height:31px;
+	font-size:18px;
+	color:#565656;
+	font-weight:bold;
+	background: url(../images/title8.gif) no-repeat left center;
+}
+.prod_box {
+	width:173px;
+	height:auto;
+	float:left;
+	padding:10px 10px 10px 11px;
+}
+.center_prod_box {
+	width:173px;
+	height: auto;
+	float:left;
+	text-align:center;
+	padding:0px;
+	margin:0px;
+	border:1px #c5c5c5 solid;
+}
+.prod_details_tab {
+	width:173px;
+	height:31px;
+	float:left;
+	margin:3px 0 0 0;
+	padding-left: 10px;
+}
+.border_box {
+	width:180px;
+	height:auto;
+	text-align:center;
+}
+.product_title {
+	padding:5px 0 5px 0;
+	font-weight:bold;
+}
+.product_title a {
+	color:#565656;
+	text-decoration:none;
+	padding:5px 0 5px 0;
+	font-weight:bold;
+	border:none;
+}
+.product_title a:hover {
+	color:#0283DD;
+}
+.product_img {
+	padding:5px 0 5px 0;
+}
+.prod_price {
+	padding:5px 0 5px 0;
+}
+span.reduce {
+	color:#666666;
+	text-decoration:line-through;
+}
+span.price {
+	color: #ff8a00;
+}
+.pagination {	/* -------分页----- */
+	width:780px;
+	height:31px;
+	float:left;
+	padding:2px 0 2px 10px;
+	line-height:31px;
+	font-size:12px;
+}
+.pagination ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	font-size: 12px;
+}
+.pagination li {
+	list-style-type: none;
+	display: inline;
+	padding-bottom: 1px;
+}
+.pagination a, .pagination a:visited {
+	padding: 0 5px;
+	border: 1px solid #9aafe5;
+	text-decoration: none;
+	color: #2e6ab1;
+}
+.pagination a:hover, .pagination a:active {
+	border: 1px solid #2b66a5;
+	color: #000;
+	background-color: #FFC;
+}
+.pagination li.disablepage {
+	padding: 0 5px;
+	border: 1px solid #929292;
+	color: #929292;
+}
+.pagination li.currentpage {
+	font-weight: bold;
+	padding: 0 5px;
+	border: 1px solid navy;
+	background-color: #2e6ab1;
+	color: #FFF;
+}
+/* -------定义product子页面产品列表区域规则end----- */
+
+/* -------定义productdetail商品详细信息区域规则----- */
+#about{		/* 商品详细信息容器的样式*/
+	width:517px;				/*容器宽度517px*/
+	padding:0 0 0 5px;
+	float:left;				/*向左浮动*/
+	margin:0 0 0 0;
+}
+#about .description p{	/* 商品详细信息容器中段落的样式*/
+	padding:0 0 15px 0;	/*上、右、下、左的内边距依次为0px,0px,15px,0px*/
+}
+.tree{			/*当前页面所在目录树等级的样式*/
+	width:100%;
+	height:20px;
+	border-bottom:1px solid #BABABA;
+	padding:0 0 3px 0;
+}
+.tree a{		/*目录树超链接的样式*/
+	color:#4A4A4A;
+	text-decoration:underline		/*加下划线*/
+}
+.tree a:visited{		/*目录树访问过链接的样式*/
+	text-decoration:underline		/*加下划线*/
+}
+.tree a:hover{		/*目录树悬停链接的样式*/
+	text-decoration:none		/*链接无修饰*/
+}
+.photos{			/*左侧区域的样式*/
+	width:227px;
+	float:left;		/*向左浮动*/
+	padding:25px 17px 0 0
+}
+.moreph{			/*点击查看大图链接的样式*/
+	display:block;	/*块级元素*/
+	width:92px;
+	line-height:17px;	/*行高17px*/
+	color:#565656;
+	text-decoration:none;		/*链接无修饰*/
+	padding:0 0 0 14px;
+	margin:10px 10px 20px 55px
+}
+.comments{			/*查看评论链接的样式*/
+	background-image:url(../images/bulb.jpg);	/*背景图像*/
+	background-position:top left;	/*背景图像顶端左对齐*/
+	background-repeat:no-repeat;	/*背景图像无重复*/
+	padding:0 0 5px 29px;
+	margin:0 0 0 18px;
+	color:#0283DD;		/*青色文字*/
+	line-height:25px;	/*行高25px*/
+	text-decoration:underline	/*加下划线*/
+}
+.comments:visited{		/*查看评论访问过链接的样式*/
+	text-decoration:underline		/*加下划线*/
+}
+.comments:hover{	/*查看评论悬停链接的样式*/
+	text-decoration:none	/*链接无修饰*/
+}
+.description{					/*右侧区域的样式*/
+	width:253px;
+	float:left;		/*向左浮动*/
+	padding:25px 0 0 17px;
+	position:relative	/*相对定位*/
+}
+.description u{				/*右侧区域中图书标题的样式*/
+	font-size:12px;
+	color:#4A4A4A;				/*深灰色文字*/
+	font-weight:bold				/*字体加粗*/
+}
+.star{					/*右侧区域顶端右侧图书星级的样式*/
+	position:absolute;	/*绝对定位*/
+	top:28px;			/*距离容器顶端28px*/
+	right:0px;			/*距离容器右侧0px*/
+	color:#E27C0E;
+	font-size:12px;
+	font-weight:bold	/*字体加粗*/
+}
+#features li{			/*列表项的样式*/
+	list-style-type:none;			/*不显示项目符号*/
+	line-height:17px;	/*行高17px*/
+	padding:0 0 0 7px;
+	width:230px;
+}
+#features span{		/*列表项文字的样式*/
+	width:230px;
+	display:block;	/*块级元素*/
+	float:left;	/*向左浮动*/
+}
+.carts{				/*加入购物车区域的样式*/
+	padding:21px 0 0 0;
+	float:left		/*向左浮动*/
+}
+
+/* -------定义cart子页面产品列表区域规则----- */
+#main{
+	padding:0px 12px 30px 20px;
+	width:780px;
+}
+#main a:link,#main a:visited{
+	color: #0283DD;
+}
+/* -------定cart子页面产品列表区域规则end----- */
+
+/*---------关于页面about.html的样式---------*/
+.tmo_list {
+	margin: 10px 0 10px 15px;
+	padding: 0;
+	list-style: none
+}
+.tmo_list li {
+	color:#999;
+	margin: 0 0 5px 0;
+	padding: 0 0 0 15px;
+	line-height:24px;
+	background: url(../images/star_red.gif) no-repeat scroll 0 5px
+}
+.tmo_list li a {
+	color: #999;
+	font-weight: normal
+}
+.tmo_list li a:hover {
+	color: #333
+}
+#main p{
+	padding:10px 0 0 5px;
+	margin:0px;
+	text-indent:2em;
+}
+#main h3{
+	font-size: 20px;
+	margin: 5px 0 20px;
+	padding: 0;
+}
+blockquote {
+	border: 4px solid #039fb1;
+	padding: 19px;
+	margin: 20px 0 0 0;
+	text-indent:2em;
+}
+/*---------服务页面faqs.html的样式---------*/
+#faqs{
+	padding:0px 12px 30px 20px;
+	width:780px;
+}
+#faqs a:link,#faqs a:visited{
+	color: #0283DD;
+}
+#faqs p {
+	margin-bottom: 20px;
+}
+#faqs h5 {
+	margin-bottom: 5px
+}
+
+/*---------结算页面checkout.html的样式---------*/
+#check{
+	padding:0px 12px 30px 20px;
+	float:left
+}
+#check h3{
+	font-size: 20px;
+	margin: 5px 0 20px;
+	padding: 0;
+}
+#check h4{
+	font-size: 16px;
+	margin: 0 0 15px;
+	padding: 0;
+}
+#check h5{
+	font-size: 14px;
+	margin: 0 0 10px;
+	padding: 0;
+}
+#check a:link,#check a:visited{
+	color: #0283DD;
+}
+#check a:hover{
+	text-decoration:underline
+}
+
+/*---------联系页面contact.html的样式---------*/
+#contact{
+	padding:0px 12px 30px 20px;
+	float:left
+}
+#contact p{
+	padding:0 0 10px 5px;
+	margin:0px;
+	text-indent:2em;
+}
+#contact_content{
+	width:500px;
+}
+#contact_form { padding:20px 60px; width: 300px; margin:0 0 40px 20px;
+border:1px dashed #5a5a5a;}
+#contact_form form { margin: 0px; padding: 0px; }
+
+#contact_form form .input_field { 
+	font-family: Arial, Helvetica, sans-serif;
+	width: 270px; 
+	padding: 5px; 
+	color: #808b98;
+	background: #fff;
+	border: 1px solid #dedede; 
+}
+
+#contact_form form label { display: block; width: 100px; margin-right: 12px; font-size: 11px }
+
+#contact_form form textarea { 
+	font-family: Arial, Helvetica, sans-serif;
+	width: 270px; 
+	height: 200px; 
+	padding: 5px; 
+	color: #808b98;
+	background: #fff; 
+	border: 1px solid #dedede; 
+}
+
+#contact_form form .submit_btn { 
+	display: block; 
+	padding: 5px 12px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-weight: bold;
+	background-color: #000; 
+	border: 1px solid #fff; 
+	color: #fff; 
+	font-size:11px; 
+	cursor: pointer;
+}
+.drink1{
+font-size:19px; color:#663300; height:26px; width:150px; font-weight:bold;text-align: left; text-indent:1em; margin-left:20px;}
+.drink2{background-color: #330000; color: #FFFFFF;font-size:22px;  height:26px; width:150px; font-weight:bold;text-align: left; text-indent:1em; margin-left:30px;}
+.img1{ float:left; margin-left:20px;}
+/******************图片滚动区域*****************************/
+@charset "utf-8";
+
+
+/***********************************************/

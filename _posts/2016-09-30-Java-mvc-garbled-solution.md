@@ -1,68 +1,17 @@
 ---
 layout: post
-title:  "Java 错误日记-1-乱码问题解决方法"
+title:  "Java错误日记-2-MVC乱码解决方法"
 categories: Java
-tags:  Java error mvc 乱码
+tags:  Java 乱码 mvc
 ---
-
 
 * content
 {:toc}
 
-我们每次使用eclipse编写JavaWeb程序的时候，普遍会遇到乱码问题
+彻底解决Spring MVC 中文乱码问题
 
 
-
-
-
-
-
-## 普通乱码解决方法
-
-* 1、查看Tomcat 的conf的serve.xml文件格式
-
-* 2、查看项目的编码格式
-
-* 3、将
-
-```
-req.setCharacterEncoding("utf-8");
-resp.setCharacterEncoding("utf-8");
-```
-
-加入servlet中
-
-* 4、eclipse导入jquery包后报错问题解决办法
-
-（1）打开项目.project文件，去掉如下内容：
-	代码如下:
-
-```
-<buildCommand>
-<name>org.eclipse.wst.jsdt.core.javascriptValidator</name>
-<arguments>
-</arguments>
-</buildCommand>
-```
-
-（2）删除原来的js,重启重新复制一份，因为原来的文件已被eclipse项目标记为错误了。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 彻底解决Spring MVC 中文乱码问题
-
-**1：表单提交controller获得中文参数后乱码解决方案**
+##表单提交controller获得中文参数后乱码解决方案
 注意：  jsp页面编码设置为UTF-8
 form表单提交方式为必须为post，get方式下面spring编码过滤器不起效果
 
@@ -132,7 +81,7 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 写上这句话就不会再出现乱码了。
 ```
 
-**第三种情况：页面中文，传递到controller也是正确的，但是保存到数据库之后就是乱码（也不是严格意义的乱码，跟上面一样全是问号）**
+* 第三种情况：页面中文，传递到controller也是正确的，但是保存到数据库之后就是乱码（也不是严格意义的乱码，跟上面一样全是问号）
 
 这个问题困扰了我一段时间，开始觉得数据库的编码格式不正确，重新创建了编码格式为utf-8的数据库也还是不可以，最后觉得是jboss的问题，我们的服务器用的是jboss，上网查了资料在连接数据源的时候加上编码格式就可以了，代码如下：
 
@@ -191,8 +140,6 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
     </filter>
 
 ```
-
- 
  
 **设置request字符集**
 
@@ -216,7 +163,4 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 ```
 	String str=newString((request.getParameter("bigQuestionTypeName")).getBytes("iso-8859-1"),"utf-8")
 ```
-
-
-
 

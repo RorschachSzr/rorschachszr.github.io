@@ -149,6 +149,7 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 ```
  
+ 
 **设置request字符集**
 
 往往从前台传入到对应的controller或者是action之后出现乱码，讲讲我一般的思路是先打印request本身默认的字符集
@@ -158,8 +159,10 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 	System.out.println(request.getCharacterEncoding());
 
 ```
+
  
 接着按照情况，如果打印的不是所需要的字符集则设置相应字符集即可
+
  
 ``` 
 	 request.setCharacterEncoding("UTF-8");
@@ -171,4 +174,5 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 ```
 	String str=newString((request.getParameter("bigQuestionTypeName")).getBytes("iso-8859-1"),"utf-8")
 ```
+
 

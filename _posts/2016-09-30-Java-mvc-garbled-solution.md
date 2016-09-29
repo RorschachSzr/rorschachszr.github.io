@@ -115,6 +115,7 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 
 ## 页面乱码解决方法
+
 页面相对是最为容易解决的，往往是在相应的jsp页面或者html页面设置相关的字符集即可。
 
 如:
@@ -130,6 +131,7 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 
 ## 传值乱码解决方法
+
 在传值过程中，也是乱码出现的频繁地。先不说到底是什么场景了，通常常用的方案有如下几个配置指定的`filter`
  
  ```
@@ -149,7 +151,7 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 ```
  
- 
+
 **设置request字符集**
 
 往往从前台传入到对应的controller或者是action之后出现乱码，讲讲我一般的思路是先打印request本身默认的字符集

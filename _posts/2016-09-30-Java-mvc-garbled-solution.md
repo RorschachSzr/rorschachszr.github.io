@@ -8,10 +8,18 @@ tags:  Java 乱码 mvc
 * content
 {:toc}
 
+
 彻底解决Spring MVC 中文乱码问题
 
 
-##表单提交controller获得中文参数后乱码解决方案
+
+
+
+
+
+
+
+## 表单提交controller获得中文参数后乱码解决方案
 注意：  jsp页面编码设置为UTF-8
 form表单提交方式为必须为post，get方式下面spring编码过滤器不起效果
 
@@ -106,7 +114,7 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 
 
-##页面乱码解决方法
+## 页面乱码解决方法
 页面相对是最为容易解决的，往往是在相应的jsp页面或者html页面设置相关的字符集即可。
 
 如:
@@ -121,7 +129,7 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 
 
-##传值乱码解决方法
+## 传值乱码解决方法
 在传值过程中，也是乱码出现的频繁地。先不说到底是什么场景了，通常常用的方案有如下几个配置指定的`filter`
  
  ```

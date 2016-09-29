@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Java错误日记-2-MVC乱码解决方法"
+title:  "Java错误日记-3-MVC乱码解决方法"
 categories: Java
 tags:  Java 乱码 mvc
 ---
@@ -58,13 +58,19 @@ form表单提交方式为必须为post，get方式下面spring编码过滤器不
 
 在配置连接数据库的参数设置修改：
 ```
-	<property name="url" value="jdbc:mysql://localhost:3306/dbname?useUnicode=true&characterEncoding=UTF-8"></property>  
+	<property name="url" 
+	value="jdbc:mysql://localhost:3306/dbname?useUnicode=true&characterEncoding=UTF-8">
+	</property>  
 ```
 
-* 第一种情况：jsp页面中文输入，到controller乱码，这时候需要设置的是在web.xml文件中添加一个编码的过滤器（filter）将编码统一为UTF-8，代码如下:
-Web.xml配置文件：
+* 第一种情况：
+jsp页面中文输入，到controller乱码
+
+这时候需要设置的是在web.xml文件中添加一个编码的过滤器（filter）将编码统一为UTF-8，代码如下:
+
 
 ```
+<!-- Web.xml配置文件-->
 <filter>
 <filter-name>CharacterEncodingFilter</filter-name>
 <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -81,15 +87,23 @@ Web.xml配置文件：
 
 
 这里需要注意的是，最好把这段代码放在web.xml中开头的位置，因为拦截有顺序，如果放在后面的话容易拦截不到。
+
 * 第二种情况：
-数据库中文数据，jsp页面显示乱码（不是严格意义上的乱码，而是以问号的形式呈现）
-由于我们前后台的数据交互使用的是json数据，出现这种情况的原因我也不太清楚，之前也没遇到过，只能怪自己做过的项目太少，解决起来也不困难，只需要在转json的时候设置一下编码格式就可以了，代码如下：
+数据库中文数据，jsp页面显示乱码
+（不是严格意义上的乱码，而是以问号的形式呈现）
+
+由于我们前后台的数据交互使用的是json数据，出现这种情况的原因我也不太清楚，之前也没遇到过，
+只能怪自己做过的项目太少，解决起来也不困难，
+只需要在转json的时候设置一下编码格式就可以了，代码如下：
+
 ```
 response.setContentType("application/json;charset=UTF-8");//防止数据传递乱码
 写上这句话就不会再出现乱码了。
 ```
 
-* 第三种情况：页面中文，传递到controller也是正确的，但是保存到数据库之后就是乱码（也不是严格意义的乱码，跟上面一样全是问号）
+* 第三种情况：
+页面中文，传递到controller也是正确的，但是保存到数据库之后就是乱码
+（也不是严格意义的乱码，跟上面一样全是问号）
 
 这个问题困扰了我一段时间，开始觉得数据库的编码格式不正确，重新创建了编码格式为utf-8的数据库也还是不可以，最后觉得是jboss的问题，我们的服务器用的是jboss，上网查了资料在连接数据源的时候加上编码格式就可以了，代码如下：
 

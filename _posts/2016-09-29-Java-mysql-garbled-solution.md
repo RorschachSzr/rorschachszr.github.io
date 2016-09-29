@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Java 错误日记-3-存入数据库乱码解决方法"
+title:  "Java 错误日记-2-存入数据库乱码解决方法"
 categories: Java
 tags:  Java error 数据库 乱码 mysql
 ---

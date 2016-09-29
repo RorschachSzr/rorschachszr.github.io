@@ -138,11 +138,11 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 在传值过程中，也是乱码出现的频繁地。先不说到底是什么场景了，通常常用的方案有
 
-如下几个配置指定的`filter`
+如下几个配置指定的filter
 
 
 
- ```
+```
 	<!-- 配置请求过滤器，编码格式设为UTF-8，避免中文乱码-->
     <filter>
       <filter-name>springUtf8Encoding</filter-name>
@@ -156,32 +156,32 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
           <param-value>true</param-value>
        </init-param>
     </filter>
-
 ```
-
 
 
 **设置request字符集**
 
-往往从前台传入到对应的controller或者是action之后出现乱码，讲讲我一般的思路是先打印request本身默认的字符集
- 
- 
+往往从前台传入到对应的controller或者是action之后出现乱码
+
+讲讲我一般的思路
+
+* 先打印request本身默认的字符集
+
 ```
 	System.out.println(request.getCharacterEncoding());
 
 ```
 
- 
-接着按照情况，如果打印的不是所需要的字符集则设置相应字符集即可
 
+* 接着按照情况，如果打印的不是所需要的字符集则设置相应字符集即可
  
 ``` 
 	 request.setCharacterEncoding("UTF-8");
 
 ```
 
- 
-当然某种情况可能还是无法解决这时候用以下这个即可
+* 当然某种情况可能还是无法解决这时候用以下这个即可
+
 ```
 	String str=newString((request.getParameter("bigQuestionTypeName")).getBytes("iso-8859-1"),"utf-8")
 ```

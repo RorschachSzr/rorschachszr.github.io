@@ -2,7 +2,7 @@
 layout: post
 title:  "Java 错误日记(1)乱码问题解决方法"
 categories: Java
-tags:Java error mvc 乱码
+tags:  Java error mvc 乱码
 ---
 
 * content

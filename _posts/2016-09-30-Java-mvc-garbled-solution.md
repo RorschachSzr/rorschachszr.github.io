@@ -114,11 +114,14 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 
 
+
+
 ## 页面乱码解决方法
 
 页面相对是最为容易解决的，往往是在相应的jsp页面或者html页面设置相关的字符集即可。
 
 如:
+
 ```
 <%@page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -132,8 +135,13 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
 
 ## 传值乱码解决方法
 
-在传值过程中，也是乱码出现的频繁地。先不说到底是什么场景了，通常常用的方案有如下几个配置指定的`filter`
- 
+
+在传值过程中，也是乱码出现的频繁地。先不说到底是什么场景了，通常常用的方案有
+
+如下几个配置指定的`filter`
+
+
+
  ```
 	<!-- 配置请求过滤器，编码格式设为UTF-8，避免中文乱码-->
     <filter>
@@ -150,7 +158,8 @@ response.setContentType("application/json;charset=UTF-8");//防止数据传递�
     </filter>
 
 ```
- 
+
+
 
 **设置request字符集**
 

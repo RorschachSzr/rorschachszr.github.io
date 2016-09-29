@@ -57,10 +57,11 @@ form表单提交方式为必须为post，get方式下面spring编码过滤器不
 数据库表和表字段是否正确**
 
 在配置连接数据库的参数设置修改：
+
 ```
 	<property name="url" 
 	value="jdbc:mysql://localhost:3306/dbname?useUnicode=true&characterEncoding=UTF-8">
-	</property>  
+	</property>
 ```
 
 * 第一种情况：

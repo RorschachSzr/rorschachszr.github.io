@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: HyG
-brief-intro: Front-end Dev Engineer
+title: Rorschach
+brief-intro: 像生于深海的鱼族,若不自燃,便只有漆黑一片
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://gaohaoyang.github.io" # the base hostname & protocol for your site
+url: "https://rorschachszr.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
@@ -31,11 +31,7 @@ description_footer: 我只在乎沿途的风景！
 duoshuo_shortname: #Rorschach
 disqus_shortname: RorschachSzr
 
-# Site settings
-title: Rorschach
-brief-intro: Front-end Dev Engineer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://rorschachszr.github.io" # the base hostname & protocol for your site
+
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即

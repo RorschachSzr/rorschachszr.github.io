@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "自己终是他人"
-categories: 杂文
-tags:  杂文 
+title:  "Android Studio项目导入错误"
+categories: AndroidStudio
+tags:  AndroidStudio Error
 ---
 
 * content

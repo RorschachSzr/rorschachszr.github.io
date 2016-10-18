@@ -30,7 +30,7 @@ tags:  AndroidStudio Error Import
 然后，修改`gradle-wrapper.properties`文件中的
 
 ```
-distributionUrl=https\://services.gradle.org/distributions/gradle-**2.xxx**-all.zip
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.xxx-all.zip
 ```
 
 把`gradle`的版本号修改成**2.10**之后**rebuild**即可

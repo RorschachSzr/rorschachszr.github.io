@@ -25,8 +25,6 @@ lugins\maven-resources-plugin\2.5\maven-resources-plugin-2.5.jar): error in ope
 ing zip file -> [Help 1]
 ```
 
-因为
-
 打开`Maven --> conf --> setting.xml` 修改`<mirror>...</mirror>`
 为:
 
@@ -44,5 +42,7 @@ ing zip file -> [Help 1]
 
 再打开 `C:\Users\%用户名%\.m2`中的setting.xml ,按照上面的方法修改镜像地址。
 
-再使用**CMD**在项目根目录中 运行 `mvn install` 或者 再次用其他IDE工具创建Maven项目即可。
+再使用**CMD**在项目根目录中 运行 `mvn install` 或者 再次用其他IDE工具创建`Maven`项目即可。
+
+
 

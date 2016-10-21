@@ -36,7 +36,7 @@ resp.setCharacterEncoding("utf-8");
 （1）打开项目.project文件，去掉如下内容：
 	代码如下:
 
-```
+```html
 <buildCommand>
 <name>org.eclipse.wst.jsdt.core.javascriptValidator</name>
 <arguments>

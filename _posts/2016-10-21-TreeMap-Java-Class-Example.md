@@ -34,7 +34,7 @@ headMap(K toKey) |	SortedMap<K,V>         |	获取一个子集。其所有对象
 subMap(K fromKey, K toKey)|	SortedMap<K,V> |	获取一个子集。其所有对象的 key 的值小于 toKey ，大于等于 fromKey
 tailMap(K fromKey)|	SortedMap<K,V>	       |获取一个子集。其所有对象的 key 的值大于等于 fromKey
 
->表1 TreeMap类通过实现java.util.SortedMap接口得到的方法 
+*表1 TreeMap类通过实现java.util.SortedMap接口得到的方法* 
 
 在创建 TreeMap 对象时，如果使用参数为空的构造方法，则根据 Map 对象的 key 进行排序；如果使用参数为 Comparator 的构造方法，则根据 Comparator 进行排序。 
 

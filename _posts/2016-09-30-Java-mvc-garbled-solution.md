@@ -31,7 +31,7 @@ form表单提交方式为必须为post，get方式下面spring编码过滤器不
 
 修改web.xml，增加编码过滤器，如下（注意，需要设置forceEncoding参数值为true）
 
-```
+```js
 <filter>
 		<filter-name>characterEncodingFilter</filter-name>
 		<filter-class>

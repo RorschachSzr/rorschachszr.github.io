@@ -42,7 +42,14 @@ tailMap(K fromKey)|	SortedMap<K,V>	       |获取一个子集。其所有对象�
 ## HashMap VS. TreeMap 
 
 在添加、删除和定位映射关系上，TreeMap类要比HashMap类的性能差一些，但是其中的映射关系具有一定的顺序。 
-如果不需要一个有序的集合，则建议使用HashMap类；如果需要进行有序的遍历输出，则建议使用TreeMap类。  在这种情况下，可以先使用 HashMap。在需要排序时，利用现有的 HashMap，创建一个 TreeMap 类型的实例（例如下面的例子）。 
+
+* 如果需要一个**无序的**集合，则建议使用HashMap类；
+
+* 如果需要进行**有序的**遍历输出，则建议使用TreeMap类。  
+
+在这种情况下，可以先使用 HashMap。
+
+在需要排序时，利用现有的 HashMap，创建一个 TreeMap 类型的实例（例如下面的例子）。 
 
 ```java
 import java.util.Collections;  
@@ -98,10 +105,15 @@ public class TestCollection {
 
 ## 当Key 重复时排序
 
-如果我们需要一个有序的Map，我们会使用TreeMap进行存储。TreeMap默认是按照key值升序进行排序的，如数字、ASCII。
-如果我们需要对**TreeMap**按值进行排序的话，可以实例化`Comparator接口`，在**TreeMap**的构造方法中当作参数传入。
+* 如果我们需要一个有序的Map，我们会使用TreeMap进行存储。TreeMap默认是按照key值升序进行排序的，如数字、ASCII.  
+
+* 如果我们需要对**TreeMap**按值进行排序的话，可以实例化`Comparator接口`，在**TreeMap**的构造方法中当作参数传入。
+
 这里遇到了问题：当插入TreeMap的**两条数据value值一样的时候，后一条数据会覆盖前一条数据。**
-通过查资料发现，原因是实例化`Comparator接口`的时候，相当于自己**实现了一个比较器**，而TreeMap的插入与取出都是会经过比较器的。
+
+原因是实例化`Comparator接口`的时候，相当于自己**实现了一个比较器**，而TreeMap的插入与取出都是会经过比较器的。
+
+
 以下是我自己实现的比较器...
 代码为：
 

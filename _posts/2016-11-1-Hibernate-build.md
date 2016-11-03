@@ -14,9 +14,15 @@ tags:  Hibernate Java Build Example
 
 
 
-##入门实例：向数据库插入一个对象
+## 入门实例：向数据库插入一个对象
+  
 
-1.** 第一步需要引入我们的jar包，推荐使用maven管理项目，直接在pom.xml中添加**
+
+
+1.**第一步需要引入我们的jar包，推荐使用maven管理项目，直接在pom.xml中添加**
+  
+
+  
 
 ```xml
 <properties>
@@ -73,11 +79,27 @@ tags:  Hibernate Java Build Example
 ```
 
 ***
+  
+
+
+
+
+
+
+
+
+
 
 
 ## 2. 配置hibernate.cfg.xml
+  
+
+
 
 在类**根路径**下创建`hibernate.cfg.xml`，在测试文件中，我们会**默认读取**此位置下此名字的hibernate配置文件。
+  
+
+
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -110,16 +132,26 @@ tags:  Hibernate Java Build Example
 </hibernate-configuration>
 
 ```
+  
+
+
+
 
 ***
 
 ## 3. 编写实体类对象
+  
+
+
 
 hibernate是一个ORM(Object-Relation-Mapping)`对象关系映射型框架`，我们通过创建实体类，一一对应到我们的数据库表。  
 
 一旦配置好我们的实体类，hibernate能够自动帮我们完成数据库建表操作。  
 
 本系列环境基于hibernate4，这里优先使用注解的形式来配置实体。  
+  
+
+
 
 ```java
 
@@ -194,16 +226,30 @@ public class News {
 
 
 ```
+  
+
+
+
+
+
+
 
 ***
 
 ## 4. 编写测试文件
+  
+
+
 在我们完成数据库操作前，需要先知道**hibernate的两个核心类**：
+  
+
    
 类名                                          |	说明
 ----------------------------------------------|----------
 SessionFactory (org.hibernate.SessionFactory) |  针对单个数据库映射关系经过编译后的内存镜像,是线程安全的(不可变)。 它是生成Session的工厂。
 Session (org.hibernate.Session)               |  表示应用程序与持久储存层之间交互操作的一个单线程对象,此对象生存期很短,隐藏了JDBC连接,也是Transaction的工厂。
+
+  
 
 
 
@@ -212,6 +258,11 @@ Session (org.hibernate.Session)               |  表示应用程序与持久储�
    一旦我们需要进行数据库操作时，我们可以创建新的Session会话对象，来进行我们的数据库操作。
 
    明白这一点后，我们开始我们的测试文件编写:
+
+
+
+
+
 
 ```java
 
@@ -250,15 +301,26 @@ Session (org.hibernate.Session)               |  表示应用程序与持久储�
     }
 
 ```
+  
+
+
+
 
 >运行测试文件。我们看到控制台输出： 
-Hibernate: create table hibernate_sequence (next_val bigint)
-Hibernate: insert into hibernate_sequence values ( 1 )
-Hibernate: create table News (id integer not null, author varchar(255), date datetime, title varchar(255), primary key (id))
-Hibernate: select next_val as id_val from hibernate_sequence for update
-Hibernate: update hibernate_sequence set next_val= ? where next_val=?
-Hibernate: insert into News (author, date, title, id) values (?, ?, ?, ?)
-我们就成功了
+
+>Hibernate: create table hibernate_sequence (next_val bigint)
+
+>Hibernate: insert into hibernate_sequence values ( 1 )
+
+>Hibernate: create table News (id integer not null, author varchar(255), date datetime, title varchar(255), primary key (id))
+
+>Hibernate: select next_val as id_val from hibernate_sequence for update
+
+>Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+
+>Hibernate: insert into News (author, date, title, id) values (?, ?, ?, ?)
+
+我们就成功了:)
 
 
 
